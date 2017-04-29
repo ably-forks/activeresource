@@ -1,9 +1,11 @@
-= Active Resource
+= Active Resource Five
 
 Active Resource (ARes) connects business objects and Representational State Transfer (REST)
 web services.  It implements object-relational mapping for REST web services to provide transparent
 proxying capabilities between a client (ActiveResource) and a RESTful service (which is provided by Simply RESTful routing
 in ActionController::Resources).
+
+There is currently no version 5 release in Ruby gems, so as an interim solution, this release brings 5 functionality to RubyGems so that it can be included in a dependency of other gems without causing dependency conflicts with ActiveResource/ActiveModel 5 etc.
 
 == Philosophy
 
@@ -24,15 +26,15 @@ received and serialized into a usable Ruby object.
 
 The latest version of Active Resource can be installed with RubyGems:
 
-  % [sudo] gem install activeresource
+  % [sudo] gem install activeresource-five
 
 Or added to a Gemfile:
 
-  gem 'activeresource'
+  gem 'activeresource-five'
 
 For compatibility with Rails 5, use:
 
-  gem 'activeresource', github: 'rails/activeresource', branch: 'master'
+  gem 'activeresource-five', github: 'rails/activeresource', branch: 'master'
 
 Source code can be downloaded on GitHub
 
@@ -64,7 +66,7 @@ Active Resource supports the token based authentication provided by Rails throug
    class Person < ActiveResource::Base
      self.headers['Authorization'] = 'Token token="abcd"'
    end
-   
+
 You can also set any specific HTTP header using the same way.
 
 ==== Protocol
@@ -115,7 +117,7 @@ Collections can also be requested in a similar fashion
 
    # Expects a response of
    #
-   # [ 
+   # [
    #   {"id":1,"first":"Tyler","last":"Durden"},
    #   {"id":2,"first":"Tony","last":"Stark",}
    # ]

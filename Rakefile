@@ -51,8 +51,8 @@ end
 
 # Publishing ------------------------------------------------------
 
-spec = eval(File.read('activeresource.gemspec'))
-gem = "pkg/activeresource-#{spec.version}.gem"
+spec = eval(File.read('activeresource-five.gemspec'))
+gem = "pkg/activeresource-five-#{spec.version}.gem"
 tag = "v#{spec.version}"
 
 desc "Release to rubygems.org"
